@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="icon" type="image/png" href="./images/admission jagat logo.webp">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="page" class="site login-show">
+        <div class="container">
+            <div class="wrapper">
+                <div class="login">
+                    <div class="content-heading">
+                        <div class="y-style">
+                            <img src="./images/admission jagat logo.webp" alt="">
+                            <div class="logo"><a href="#">Admission<span>Jagat</span></a></div>
+                            <div class="welcome">
+                                <!-- <h2>Welcome <br>Back!</h2> -->
+                                <h2><b>Student Registration</b></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-form">
+                        <div class="y-style">
+                            <form action="">
+                                <p>
+                                    <label>Name</label>
+                                    <input type="Name" placeholder="Enter your Name" required>
+                                </p>
+                                <!-- <p>
+                                    <label>Mobile Number</label>
+                                    <input type="number" placeholder="Enter your Mobile number" required>
+                                </p> -->
+                                <p>
+                                    <label>Email</label>
+                                    <div class="email">
+                                        <input type="email" placeholder="Enter your email" required>
+                                        <button class="verify">Send OTP</button>
+                                    </div>
+                                    <div class="otp-verify"> 
+                                       <input type="number" placeholder="Enter OTP" required><button class="verify">Verify OTP</button>
+                                    </div>
+                                </p>
+                                <p>
+                                    <label>Mobile Number</label>
+                                    <input type="number" placeholder="Enter your Mobile number" required>
+                                </p>
+
+                                <!-- <p>
+                                    <label>Date</label>
+                                    <input type="Date" placeholder="Registration Date" required>
+                                </p> -->
+                                <p>
+                                    <label for="course">Select Course:</label>
+                                    <select id="course">
+                                        <option value="" disabled selected>Select a course</option>
+                                        <option class="multi-select" value="web"><p  >Web Development </p></option>
+                                        <option value="data">Data Science</option>
+                                        <option value="ai">Artificial Intelligence</option>
+                                        <option value="ml">Machine Learning</option>
+                                        <option value="cyber">Cyber Security</option>
+                                        <option value="cpp">C++ Programming</option>
+                                        <option value="python">Python Programming</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="degree">Select Degree Program:</label>
+                                    <select id="degree">
+                                        <option value="" disabled selected>Select a degree</option>
+                                        <option value="bsc">B.Sc (Bachelor of Science)</option>
+                                        <option value="ba">B.A (Bachelor of Arts)</option>
+                                        <option value="bcom">B.Com (Bachelor of Commerce)</option>
+                                        <option value="btech">B.Tech (Bachelor of Technology)</option>
+                                        <option value="msc">M.Sc (Master of Science)</option>
+                                        <option value="ma">M.A (Master of Arts)</option>
+                                        <option value="mba">MBA (Master of Business Administration)</option>
+                                        <option value="mtech">M.Tech (Master of Technology)</option>
+                                        <option value="phd">Ph.D (Doctor of Philosophy)</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="referral">Enter Referral Code:</label> 
+                                    <input type="text" id="referral" name="referral" pattern="[A-Za-z0-9]+" placeholder="e.g. ABC123" required>
+                                </p>
+                                <p><button type="submit">Register</button></p>
+                            </form>
+                            <div class="social">
+                                <p><span>Our social network </span></p>
+                                <ul>
+                                    <li><a href="#" class="instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                    <li><a href="#" class="facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                    <li><a href="#" class="twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- <div class="signup">
+                    <div class="content-heading">
+                        <div class="y-style">
+                            <div class="logo"><a href="#">Company<span>Name</span></a></div>
+                            <div class="welcome">
+                                <h2>Sign Up<br>Now</h2>
+                                <p>Ready to be crearive? <br>We can help you grow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-form">
+                        <div class="y-style">
+                            <form action="">
+                                <p>
+                                    <label>Full Name</label>
+                                    <input type="text" placeholder="Enter your name">
+                                </p>
+                                <p>
+                                    <label>Email</label>
+                                    <input type="email" placeholder="Enter Your email">
+                                </p>
+                                <p>
+                                    <label>Password</label>
+                                    <input type="password" placeholder="Enter password">
+                                </p>
+                                <p class="check">
+                                    <input type="checkbox" id="remember">
+                                    <label for="terms">I agree to all statements included in <a href="#">Terms of Use</a> </label>
+                                </p> 
+                                <p><button type="submit">Sign Up</button></p>
+                            </form>
+                            <div class="social">
+                                <ul>
+                                    <li><a href="#" class="google"><ion-icon name="logo-google"></ion-icon></a></li>
+                                    <li><a href="#" class="facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                    <li><a href="#" class="twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                                </ul>
+                            </div>
+                            <div class="afterform">
+                                <p>Already have an account?</p>
+                                <a href="#" class="t-login">Login here</a>
+                            </div>   
+                        </div>
+                    </div>
+                </div>   -->
+                <!--signup  form -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>
