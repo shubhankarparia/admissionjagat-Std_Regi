@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
     <link rel="icon" type="image/png" href="./images/admission jagat logo.webp">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        select { margin: 10px 0; padding: 5px; width: 300px; }
+        .hidden { display: none; }
+    </style>
 </head>
 <body>
     <div id="page" class="site login-show">
@@ -14,7 +20,7 @@
                 <div class="login">
                     <div class="content-heading">
                         <div class="y-style">
-                            <img src="./images/admission jagat logo.webp" alt="">
+                            <img src="./assets/ jagat logo.webp" alt="">
                             <div class="logo"><a href="#">Admission<span>Jagat</span></a></div>
                             <div class="welcome">
                                 <!-- <h2>Welcome <br>Back!</h2> -->
@@ -29,57 +35,45 @@
                                     <label>Name</label>
                                     <input type="Name" placeholder="Enter your Name" required>
                                 </p>
-                                <!-- <p>
-                                    <label>Mobile Number</label>
-                                    <input type="number" placeholder="Enter your Mobile number" required>
-                                </p> -->
+   
                                 <p>
                                     <label>Email</label>
                                     <div class="email">
                                         <input type="email" placeholder="Enter your email" required>
-                                        <button class="verify">Send OTP</button>
+                                        <!-- <button class="verify">Send OTP</button> -->
                                     </div>
-                                    <div class="otp-verify"> 
-                                       <input type="number" placeholder="Enter OTP" required><button class="verify">Verify OTP</button>
-                                    </div>
+                                    <!-- <div class="otp-verify"> 
+                                       <input type="number" placeholder="Enter OTP" required>
+                                       <button class="verify">Verify OTP</button>
+                                    </div> -->
                                 </p>
                                 <p>
                                     <label>Mobile Number</label>
-                                    <input type="number" placeholder="Enter your Mobile number" required>
+                                    <input type="number"    pattern="[0-9]{10}" maxlength="10" minlength="10" 
+                                    placeholder="91-" required>
                                 </p>
 
-                                <!-- <p>
-                                    <label>Date</label>
-                                    <input type="Date" placeholder="Registration Date" required>
-                                </p> -->
-                                <p>
-                                    <label for="course">Select Course:</label>
-                                    <select id="course">
-                                        <option value="" disabled selected>Select a course</option>
-                                        <option class="multi-select" value="web"><p  >Web Development </p></option>
-                                        <option value="data">Data Science</option>
-                                        <option value="ai">Artificial Intelligence</option>
-                                        <option value="ml">Machine Learning</option>
-                                        <option value="cyber">Cyber Security</option>
-                                        <option value="cpp">C++ Programming</option>
-                                        <option value="python">Python Programming</option>
-                                    </select>
-                                </p>
-                                <p>
-                                    <label for="degree">Select Degree Program:</label>
+                                <!-- <h2>Select Course Type</h2> -->
+                                <label for="courseType">Course Type:</label>
+                                <select id="courseType">
+                                    <option value="">-- Select --</option>
+                                    <option value="UG">UG</option>
+                                    <option value="PG">PG</option>
+                                </select>
+
+                                <div id="degreeContainer" class="hidden">
+                                    <label for="degree">Select Degree:</label>
                                     <select id="degree">
-                                        <option value="" disabled selected>Select a degree</option>
-                                        <option value="bsc">B.Sc (Bachelor of Science)</option>
-                                        <option value="ba">B.A (Bachelor of Arts)</option>
-                                        <option value="bcom">B.Com (Bachelor of Commerce)</option>
-                                        <option value="btech">B.Tech (Bachelor of Technology)</option>
-                                        <option value="msc">M.Sc (Master of Science)</option>
-                                        <option value="ma">M.A (Master of Arts)</option>
-                                        <option value="mba">MBA (Master of Business Administration)</option>
-                                        <option value="mtech">M.Tech (Master of Technology)</option>
-                                        <option value="phd">Ph.D (Doctor of Philosophy)</option>
+                                    <option value="">-- Select Degree --</option>
                                     </select>
-                                </p>
+                                </div>
+
+                                <div id="subjectContainer" class="hidden">
+                                    <label for="subject">Select Subject/Course:</label>
+                                    <select id="subject">
+                                    <option value="">-- Select Subject --</option>
+                                    </select>
+                                </div>
                                 <p>
                                     <label for="referral">Enter Referral Code:</label> 
                                     <input type="text" id="referral" name="referral" pattern="[A-Za-z0-9]+" placeholder="e.g. ABC123" required>
@@ -98,60 +92,106 @@
                         </div>
                     </div>
                 </div> 
-
-                <!-- <div class="signup">
-                    <div class="content-heading">
-                        <div class="y-style">
-                            <div class="logo"><a href="#">Company<span>Name</span></a></div>
-                            <div class="welcome">
-                                <h2>Sign Up<br>Now</h2>
-                                <p>Ready to be crearive? <br>We can help you grow.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-form">
-                        <div class="y-style">
-                            <form action="">
-                                <p>
-                                    <label>Full Name</label>
-                                    <input type="text" placeholder="Enter your name">
-                                </p>
-                                <p>
-                                    <label>Email</label>
-                                    <input type="email" placeholder="Enter Your email">
-                                </p>
-                                <p>
-                                    <label>Password</label>
-                                    <input type="password" placeholder="Enter password">
-                                </p>
-                                <p class="check">
-                                    <input type="checkbox" id="remember">
-                                    <label for="terms">I agree to all statements included in <a href="#">Terms of Use</a> </label>
-                                </p> 
-                                <p><button type="submit">Sign Up</button></p>
-                            </form>
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#" class="google"><ion-icon name="logo-google"></ion-icon></a></li>
-                                    <li><a href="#" class="facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                                    <li><a href="#" class="twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                                </ul>
-                            </div>
-                            <div class="afterform">
-                                <p>Already have an account?</p>
-                                <a href="#" class="t-login">Login here</a>
-                            </div>   
-                        </div>
-                    </div>
-                </div>   -->
-                <!--signup  form -->
             </div>
         </div>
     </div>
 
 
-
-    <script src="login.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        const courseTypeEl = document.getElementById('courseType');
+        const degreeContainer = document.getElementById('degreeContainer');
+        const subjectContainer = document.getElementById('subjectContainer');
+        const degreeEl = document.getElementById('degree');
+        const subjectEl = document.getElementById('subject');
+    
+        const degrees = {
+          UG: [
+            "Bachelor of Arts (BA)", "Bachelor of Fine Arts (BFA)", "Bachelor of Science (BSc)", "Bachelor of Technology (BTech)", 
+            "Bachelor of Commerce (BCom)", "Bachelor of Business Administration (BBA)", "Bachelor of Medicine, Bachelor of Surgery (MBBS)",
+            "Bachelor of Nursing (BN)", "Bachelor of Pharmacy (BPharm)", "Bachelor of Architecture (BArch)", "Bachelor of Law (LLB)",
+            "Bachelor of Education (BEd)", "Bachelor of Journalism and Mass Communication (BJMC)"
+          ],
+          PG: [
+            "Master of Arts (MA)","Master of Science (MSc)", "Master of Technology (MTech)","Master of Business Administration (MBA)", "Master of Commerce (MCom)", "Master of Engineering (ME)", "Master of Computer Applications (MCA)", 
+            "Master of Laws (LLM)", "Master of Architecture (MArch)", "Master of Design (MDes)", "Doctor of Philosophy (PhD)", "Doctor of Business Administration (DBA)", "Doctor of Engineering (DEng)", "Postgraduate Diploma (PGD)", "Postgraduate Certificate (PGC)",
+          ]
+        };
+    
+        const subjects = {
+          // "B.Sc Computer Science": ["Data Structures", "Operating Systems", "Networks"],
+          // "B.Com": ["Accounting", "Finance", "Taxation"],
+          // "MBA": ["HR", "Marketing", "Finance"],
+    
+          // UG of subjects =====================
+          "Bachelor of Arts (BA)": ["English", "History", "Geography", "Philosophy"],
+          "Bachelor of Fine Arts (BFA)": ["Music", "Dance", "Theater", "Visual Arts"],
+          "Bachelor of Science (BSc)": ["Mathematics", "Physics", "Chemistry","Biology"],
+          "Bachelor of Technology (BTech)": ["Computer Science and Engineering (CSE)", "Electronics and Communication Engineering (ECE)", "Mechanical Engineering (ME)", "Civil Engineering (CE)"],
+          "Bachelor of Commerce (BCom)": ["Accounting", "Finance","Marketing", "Taxation", "Business Law", "Business Ethics", "Business Communication", "Business Statistics", "Business Mathematics", "Business Economics", "Business Management", "Business Policy"],
+          "Bachelor of Business Administration (BBA)": ["Business Communication", "Business Statistics", "Business Mathematics", "Business Economics", "Business Management",],
+          "Bachelor of Medicine, Bachelor of Surgery (MBBS)": ["Anatomy", "Biochemistry", "Pharmacology", "Pathology"],
+          "Bachelor of Nursing (BN)": ["Nursing Fundamentals", "Pharmacology", "Pathology", "Microbiology", "Community Health Nursing", "Maternal and Child Health Nursing", "Pediatric Nursing", "Psychiatric Nursing", "Medical-Surgical Nursing", "Mental Health Nursing", "Community Health Nursing"],
+          "Bachelor of Pharmacy (BPharm)": ["Pharmacology", "Pharmaceutics", "Pharmacognosy", "Pharmaceutical Chemistry", "Pharmaceutical Analysis", "Pharmaceutical Microbiology", "Pharmaceutical Biotechnology", "Pharmaceutical Engineering", "Pharmaceutical Management", "Pharmaceutical Jurisprudence", "Pharmaceutical Ethics", "Pharmaceutical Law", "Pharmaceutical Practice", "Pharmaceutical Research"],
+          "Bachelor of Architecture (BArch)": ["Architecture", "Urban Planning", "Landscape Architecture"],
+          "Bachelor of Law (LLB)": ["Constitutional Law", "Contract Law", "Tort Law", "Criminal Law", "Property Law", "Family Law"],
+          "Bachelor of Education (BEd)": ["Curriculum and Instruction", "Learning and Teaching", "Education Psychology", "Educational Technology"],
+          "Bachelor of Journalism and Mass Communication (BJMC)": ["Mass Communication", "Journalism", "Public Relations", "Advertising", "Media Studies", "Digital Media", "Broadcasting", "Cinematography", "Film Making", "Video Production", "Audio-Visual Production", "Radio and Television Production", "Print Journalism", "Online Journalism", "Digital Journalism"],
+    
+    
+          // UG of subjects =====================
+          "Master of Arts (MA)": ["English", "History", "Geography", "Philosophy"],
+          "Master of Science (MSc)": ["Mathematics", "Physics", "Chemistry", "Biology", "Computer Science", "Electronics", "Mechanical Engineering", "Civil Engineering", "Electrical Engineering", "Chemical Engineering", "Biotechnology", "Environmental Science", "Geology", "Geophysics", "Oceanography", "Atmospheric Science", "Climate Science", "Earth Science", "Planetary Science", "Astronomy", "Astrophysics"],
+          "Master of Technology (MTech)": ["Computer Science and Engineering (CSE)", "Electrical Engineering (EE)", "Mechanical Engineering (ME)", "Civil Engineering (CE)"],
+          "Master of Business Administration (MBA)": ["Business Communication", "Business Statistics", "Business", "Business Economics", "Business Management"],
+          "Master of Commerce (MCom)": ["Accounting", "Finance", "Marketing", "Taxation"],
+          "Master of Engineering (ME)": ["Computer Science and Engineering (CSE)", "Electronics", "Mechanical Engineering (ME)", "Civil Engineering (CE)", "Electrical Engineering", "Chemical Engineering", "Biotechnology", "Environmental Science"],
+          "Master of Computer Applications (MCA)": ["Data Structures", "Algorithms", "Computer", "Networking", "Database Management", "Software Engineering", "Web Development", "Mobile App Development", "Cloud Computing", "Artificial Intelligence", "Machine Learning", "Data Science", "Cyber Security","Artificial Intelligence(AI)"],
+          "Master of Laws (LLM)": ["Constitutional Law", "Contract Law", "Tort Law", "Criminal Law", "Property Law", "Family Law", "International Law", "Human Rights Law", "Environmental Law", "Intellectual Property Law"],
+          "Master of Architecture (MArch)": ["Design studios", "Building technology", "Urban design", "Landscape architecture", "Sustainable design", "Building services", "Structural systems", "Materials and construction", "Building systems", "Building economics", "Building management"],
+          "Master of Design (MDes)": ["Design studios", "Design thinking", "Design research", "Design strategy", "Design innovation", "Design entrepreneurship", "Design management", "Design leadership"],
+          "Doctor of Philosophy (PhD)": ["Computer Science", "Electronics", "Mechanical", "Civil", "Electrical", "Chemical", "Biotechnology", "Environmental Science"],
+          "Doctor of Business Administration (DBA)": ["Business Communication", "Business Statistics", "Business", "Business Economics", "Business Management", "Business Policy"],
+          "Doctor of Engineering (DEng)": ["Computer Science and Engineering (CSE)", "Elect", "Mechanical Engineering (ME)", "Civil Engineering (CE)", "Electrical Engineering", "Chemical Engineering", "Biotechnology", "Environmental Science"],
+          "Postgraduate Diploma (PGD)": ["Computer Science", "Electronics", "Mechanical", "Civil", "Electrical", "Chemical", "Biotechnology", "Environmental Science", "Business Administration", "Commerce", "Law", "Architecture", "Design", "Engineering", "Science", "Technology", "Arts", "Humanities", "Social Sciences", "Business", "Management", "Finance", "Accounting", "Marketing", "Human Resources", "Operations Management", "Supply Chain Management"],
+          "Postgraduate Certificate (PGC)": ["Computer Science", "Electronics", "Mechanical"],
+          // Add more mappings...
+        };
+    
+        courseTypeEl.addEventListener('change', function () {
+          const selectedType = this.value;
+          degreeEl.innerHTML = `<option value="">-- Select Degree --</option>`;
+          subjectEl.innerHTML = `<option value="">-- Select Subject --</option>`;
+          subjectContainer.classList.add('hidden');
+    
+          if (selectedType && degrees[selectedType]) {
+            degrees[selectedType].forEach(degree => {
+              const option = document.createElement('option');
+              option.value = degree;
+              option.textContent = degree;
+              degreeEl.appendChild(option);
+            });
+            degreeContainer.classList.remove('hidden');
+          } else {
+            degreeContainer.classList.add('hidden');
+          }
+        });
+    
+        degreeEl.addEventListener('change', function () {
+          const selectedDegree = this.value;
+          subjectEl.innerHTML = `<option value="">-- Select Subject --</option>`;
+    
+          if (subjects[selectedDegree]) {
+            subjects[selectedDegree].forEach(subject => {
+              const option = document.createElement('option');
+              option.value = subject;
+              option.textContent = subject;
+              subjectEl.appendChild(option);
+            });
+            subjectContainer.classList.remove('hidden');
+          } else {
+            subjectContainer.classList.add('hidden');
+          }
+        });
+      </script>
 </body>
 </html>
